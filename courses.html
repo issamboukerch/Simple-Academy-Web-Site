@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f9fafb;
+      }
+      .links a {
+        text-decoration: none;
+        color: gray;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: bold;
+      }
+      nav {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px rgb(201, 201, 201);
+        position: sticky;
+        top: 0;
+      }
+      .logos {
+        display: flex;
+        align-items: center;
+      }
+      #logo {
+        padding-left: 100px;
+        color: #1e88e5;
+        font-size: 30px;
+      }
+      #school {
+        margin-left: 20px;
+        color: #1e88e5;
+        font-size: 20px;
+      }
+      .links {
+        margin-right: 90px;
+      }
+      .header {
+        display: flex;
+        margin-left: 130px;
+        align-items:center ;
+      }
+      .header h2 {
+        color: #5d5c5c;
+      }
+      .header a {
+        border: none;
+        color: #1e88e5;
+        background-color: #f9fafb;
+        font-size: large;
+        margin-right: 20px;
+      }
+      .content {
+        box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        width: 25%;
+        height: 400px;
+        border-radius: 15px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .content h2 {
+        margin-left: 20px;
+        border-bottom: solid 1px lightgray;
+        padding-bottom: 10px;
+      }
+      .content li {
+        font-size: 20px;
+        padding: 10px;
+      }
+      .content a {
+        text-decoration: none;
+        font-size: large;
+        font-weight: bold;
+        color: #5d5c5c;
+
+        padding: 10px;
+        padding-right: 50px;
+      }
+      .content li:hover {
+        background-color: lightblue;
+        border-radius: 15px;
+      }
+      .courses-page {
+        display: flex;
+      }
+      .card {
+        
+        width: 900px;
+        height: 400px;
+        box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border-radius: 15px;
+        padding: 10px;
+        padding-left: 25px;
+        margin-left: 30px;
+      }
+      .card p{
+        color: #5d5c5c;
+      }
+      div.content-courses > div {
+        display: none;
+      }
+      .vid {
+        display: flex;
+        justify-content: center;
+        
+      }
+      .vid video{
+        border-radius: 15px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logos">
+        <i id="logo" class="fas fa-graduation-cap"></i>
+        <div id="school"><h1>school</h1></div>
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Course</a>
+      </div>
+    </nav>
+    <div class="header">
+      
+        <a href="index.html#test"><i class="fas fa-arrow-left fa-lg"></i></a>
+      
+      <h2>Courses Outline</h2>
+    </div>
+    <div class="courses-page">
+      <div class="content">
+        <h2>Topics</h2>
+        <ol>
+            <li><a href="#" onclick="showContent('net')">Intro to Networking</a></li>
+            <li><a href="#" onclick="showContent('dev')">Development Basics</a></li>
+            <li><a href="#" onclick="showContent('ai')">Ai Concepts</a></li>
+            <li><a href="#" onclick="showContent('elec')">Electronics 101</a></li>
+        </ol>
+      </div>
+      <div class="content-courses">
+        <div class="card" id="net">
+          <h2>1. Intro to Networking</h2>
+          <p>
+            In this lesson, we'll learn what the internet is and how computers
+            share information.
+          </p>
+          <div class="vid">
+            <video width="500" controls
+              src="video/networking.mp4"
+            ></video>
+          </div>
+        </div>
+        <div class="card" id="dev" >
+          <h2>2. Development Basics</h2>
+          <p>
+            Let's learn the basics of HTML, CSS, and JavaScript to build our
+            first webpage!
+          </p>
+          <div class="vid">
+            <video width="500" controls
+              src="video/dev.mp4"
+            ></video>
+          </div>
+        </div>
+        <div class="card" id="ai" >
+          <h2>3. AI Concepts</h2>
+          <p>
+            What is Artificial Intelligence? Let's explore how we can make
+            computers think like humans.
+          </p>
+          <div class="vid">
+            <video width="500" controls
+              src="video/AI.mp4"
+            ></video>
+          </div>
+        </div>
+        <div class="card" id="elec" >
+          <h2>4. Electronics 101</h2>
+          <p>
+            Let's learn about the tiny parts that power our phones and
+            computers, like resistors and circuits.
+          </p>
+          <div class="vid">
+            <video width="500" height="280" controls
+              src="video/elec.mp4"
+            ></video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        function showContent(show){
+            let card =document.querySelectorAll('.content-courses > div');
+            for (let i=0; i < card.length; i++) {
+                card[i].style.display = 'none';
+            }
+            document.getElementById(show).style.display = 'block';
+        }
+        showContent('net')
+    </script>
+  </body>
+</html>
