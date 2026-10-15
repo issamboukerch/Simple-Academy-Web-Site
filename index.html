@@ -20,36 +20,26 @@
             overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: gray;
-            font-size: 18px;
-            padding: 5px;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        a:hover {
-            color: #1E88E5;
-        }
-
+        /* Navigation */
         nav {
-            background-color: white;
+            background-color: #ffffff;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             position: sticky;
-            top: 0;
+            top: 15px;
             z-index: 1000;
-            padding: 15px 30px;
-            margin: 15px;
+            padding: 15px 40px;
+            max-width: 1200px;
+            margin: 15px auto;
         }
 
         .logos {
             display: flex;
             align-items: center;
+            gap: 12px;
         }
 
         #logo {
@@ -57,62 +47,71 @@
             font-size: 30px;
         }
 
-        #school {
-            margin-left: 15px;
+        #school h1 {
             color: #1E88E5;
             font-size: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
-        #school h1 {
-            font-size: 24px;
-        }
 
         .links {
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
+        .links a {
+            text-decoration: none;
+            color: #616161;
+            font-size: 17px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .links a:hover {
+            color: #1E88E5;
+        }
+
+        /* Container & Hero Section */
         .container {
             display: flex;
-            justify-content: center;
             flex-direction: column;
             align-items: center;
-            margin: 20px 15px 40px 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .hero {
             background-color: #1E88E5;
             color: white;
             width: 100%;
-            max-width: 1000px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-radius: 20px;
-            font-size: 24px;
-            padding: 40px 20px;
+            border-radius: 24px;
+            padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(30, 136, 229, 0.3);
+            box-shadow: 0 10px 30px rgba(30, 136, 229, 0.25);
+            margin-top: 20px;
         }
 
         #heading {
-            margin-bottom: 10px;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
         }
 
         .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            opacity: 0.9;
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 600px;
         }
 
-        #hero-button {
+        .hero-btn-wrap {
             background-color: white;
             color: #1E88E5;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 700;
             padding: 14px 28px;
             border-radius: 30px;
             border: none;
@@ -121,34 +120,34 @@
             align-items: center;
             gap: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
             transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
-        #hero-button:hover {
+        .hero-btn-wrap:hover {
             transform: translateY(-2px);
             background-color: #f0f4f8;
         }
 
-        #hero-button a {
+        .hero-btn-wrap a {
             color: #1E88E5;
-            font-size: 1rem;
-            padding: 0;
+            text-decoration: none;
         }
 
         #tage-one {
-            color: #616161;
-            margin-top: 50px;
-            font-size: 1.8rem;
+            color: #424242;
+            margin: 50px 0 30px 0;
+            font-size: 2rem;
             text-align: center;
         }
 
+        /* Courses Grid */
         .courses {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 60px auto;
             padding: 0 20px;
         }
 
@@ -157,30 +156,30 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
-            border-radius: 20px;
-            padding: 30px 20px;
-            width: 260px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 24px;
+            padding: 35px 25px;
+            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .box:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
         .box h2 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             margin: 15px 0 10px 0;
-            text-align: center;
+            color: #222;
         }
 
         .box p {
-            text-align: center;
             color: #666;
             font-size: 0.95rem;
             margin-bottom: 25px;
             flex-grow: 1;
+            line-height: 1.5;
         }
 
         #net { color: #2196F3; }
@@ -188,16 +187,17 @@
         #art { color: #9C27B0; }
         #elec { color: #F44336; }
 
-        .box button {
-            padding: 12px 0;
+        .box-btn {
             width: 100%;
-            border-radius: 25px;
+            padding: 12px 0;
+            border-radius: 22px;
             border: none;
             cursor: pointer;
+            font-weight: 600;
             transition: opacity 0.2s ease;
         }
 
-        .box button:hover {
+        .box-btn:hover {
             opacity: 0.9;
         }
 
@@ -206,22 +206,22 @@
         #box-button3 { background-color: #9C27B0; }
         #box-button4 { background-color: #F44336; }
 
-        .box button a {
+        .box-btn a {
             color: white;
+            text-decoration: none;
             font-size: 0.95rem;
             display: block;
             width: 100%;
             height: 100%;
-            padding: 0;
         }
 
+        /* Footer */
         .footer-cont {
             background-color: #1f2937;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 80px;
             padding: 40px 20px;
             text-align: center;
             gap: 10px;
@@ -241,15 +241,15 @@
             color: #ef4444;
         }
 
-        /* --- RESPONSIVE MEDIA QUERIES --- */
+        /* Responsive Breakpoints */
         @media (max-width: 768px) {
             nav {
-                margin: 10px;
                 padding: 12px 20px;
+                margin: 10px;
             }
 
             #logo {
-                font-size: 26px;
+                font-size: 24px;
             }
 
             #school h1 {
@@ -257,12 +257,11 @@
             }
 
             .hero {
-                width: 95%;
-                padding: 30px 15px;
+                padding: 40px 15px;
             }
 
             #heading {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
 
             .hero p {
@@ -270,18 +269,8 @@
             }
 
             #tage-one {
-                font-size: 1.4rem;
-                margin-top: 35px;
-            }
-
-            .courses {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .box {
-                width: 100%;
-                max-width: 320px;
+                font-size: 1.5rem;
+                margin: 40px 0 20px 0;
             }
         }
     </style>
@@ -302,10 +291,9 @@
         <div class="hero">
             <h1 id="heading">Learning Made Fun!</h1>
             <p>Explore exciting courses in tech and science. Your adventure starts now!</p>
-            <button id="hero-button">
-                <a id="hero-button-link" href="#test" style="color: #1E88E5;">See our courses</a> 
-                <i class="fas fa-arrow-down"></i>
-            </button>
+            <a href="#test" class="hero-btn-wrap">
+                See our courses <i class="fas fa-arrow-down"></i>
+            </a>
         </div>
         <h1 id="tage-one">Our Awesome Courses</h1>
     </div>
@@ -315,25 +303,25 @@
             <i id="net" class="fas fa-network-wired fa-3x mb-2"></i>
             <h2>Networking</h2>
             <p>Learn how computers talk to each other.</p>
-            <button id="box-button1"><a href="courses.html">Start Now</a></button>
+            <button id="box-button1" class="box-btn"><a href="courses.html">Start Now</a></button>
         </div>
         <div class="box">
             <i id="dev" class="fas fa-code fa-3x mb-2"></i>
             <h2>Development</h2>
             <p>Build your own websites and apps.</p>
-            <button id="box-button2"><a href="courses.html">Start Now</a></button>
+            <button id="box-button2" class="box-btn"><a href="courses.html">Start Now</a></button>
         </div>
         <div class="box">
             <i id="art" class="fas fa-robot fa-3x mb-2"></i>
             <h2>Artificial Intelligence</h2>
             <p>Discover how to make smart machines.</p>
-            <button id="box-button3"><a href="courses.html">Start Now</a></button>
+            <button id="box-button3" class="box-btn"><a href="courses.html">Start Now</a></button>
         </div>
         <div class="box">
             <i id="elec" class="fas fa-microchip fa-3x mb-2"></i>
             <h2>Electronics</h2>
             <p>Learn about circuits and build cool gadgets.</p>
-            <button id="box-button4"><a href="courses.html">Start Now</a></button>
+            <button id="box-button4" class="box-btn"><a href="courses.html">Start Now</a></button>
         </div>
     </div>
 
