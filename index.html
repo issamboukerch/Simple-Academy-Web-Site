@@ -3,182 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>School - Learning Platform</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-       body{
-        font-family: 'Poppins', sans-serif;
-        background-color: #F9FAFB;
-       }
-        a{
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F9FAFB;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        a {
             text-decoration: none;
             color: gray;
-            font-size: 20px;
+            font-size: 18px;
             padding: 5px;
-            font-weight: bold;
-            
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
-        nav{
+
+        a:hover {
+            color: #1E88E5;
+        }
+
+        nav {
             background-color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-radius: 15px;
-            box-shadow: 5px 5px 10px rgb(201, 201, 201);
-            position: sticky ;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
             top: 0;
-           
-            
+            z-index: 1000;
+            padding: 15px 30px;
+            margin: 15px;
         }
-        .logos{
+
+        .logos {
             display: flex;
             align-items: center;
-           
-            
         }
-        #logo{
-             padding-left: 100px;
-             color: #1E88E5
-;
-             font-size: 30px;
+
+        #logo {
+            color: #1E88E5;
+            font-size: 30px;
         }
-        #school{
-            margin-left: 20px;
-            color: #1E88E5
-;
-            font-size: 20px;
+
+        #school {
+            margin-left: 15px;
+            color: #1E88E5;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .links{
-            margin-right: 90px;
-            
+        
+        #school h1 {
+            font-size: 24px;
         }
-        .container{
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .container {
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            margin-top: 30px;
-            margin-bottom: 50px;
+            margin: 20px 15px 40px 15px;
+        }
 
-            
-        }
-        .container h1{
-            margin-top: 50px;
-        }
-        .hero{
-            background-color: #1E88E5
-;
+        .hero {
+            background-color: #1E88E5;
             color: white;
-            width: 70%;
+            width: 100%;
+            max-width: 1000px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-radius: 15px;
-            font-size: 28px;
-            padding: 50px;
+            border-radius: 20px;
+            font-size: 24px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(30, 136, 229, 0.3);
+        }
 
+        #heading {
+            margin-bottom: 10px;
+            font-size: 2.2rem;
         }
-        #heading{
-            margin-bottom: 0;
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
         }
-        #hero-button{
+
+        #hero-button {
             background-color: white;
             color: #1E88E5;
-            padding: 10px;
-            font-size: large;
+            font-size: 1rem;
             font-weight: bold;
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 28px;
-            width: 230px;
+            padding: 14px 28px;
+            border-radius: 30px;
             border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
-        #tage-one{
+
+        #hero-button:hover {
+            transform: translateY(-2px);
+            background-color: #f0f4f8;
+        }
+
+        #hero-button a {
+            color: #1E88E5;
+            font-size: 1rem;
+            padding: 0;
+        }
+
+        #tage-one {
             color: #616161;
+            margin-top: 50px;
+            font-size: 1.8rem;
+            text-align: center;
         }
-        .courses{
+
+        .courses {
             display: flex;
             justify-content: center;
-            
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .box{
+
+        .box {
+            background: white;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border-radius: 30px;
-            margin-left: 35px;
-            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+            border-radius: 20px;
+            padding: 30px 20px;
+            width: 260px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .box p{
+
+        .box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            font-size: 1.25rem;
+            margin: 15px 0 10px 0;
             text-align: center;
-            
         }
-      
-        #net{
-            color: #2196F3;
-        }
-        #dev{
-            color: #4CAF50;
-        }
-        #art{
-            color: #9C27B0;
-        }
-        #elec{
-            color: #F44336;
-        }
-        #box-button1{
-            padding: 10px 65px;
-            border-radius: 20px;
-            border: none;
-            color: white;
-            background-color:#2196F3;
 
+        .box p {
+            text-align: center;
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex-grow: 1;
         }
-        #box-button2{
-            padding: 10px 65px;
-            border-radius: 20px;
-            border: none;
-            color: white;
-            background-color:#4CAF50;
 
-        }  
-        #box-button3{
-            padding: 10px 65px;
-            border-radius: 20px;
-            border: none;
-            color: white;
-            background-color:#9C27B0;
+        #net { color: #2196F3; }
+        #dev { color: #4CAF50; }
+        #art { color: #9C27B0; }
+        #elec { color: #F44336; }
 
-        }  
-        #box-button4{
-            padding: 10px 65px;
-            border-radius: 20px;
+        .box button {
+            padding: 12px 0;
+            width: 100%;
+            border-radius: 25px;
             border: none;
-            color: white;
-            background-color:#F44336;
-
+            cursor: pointer;
+            transition: opacity 0.2s ease;
         }
-        .box button a{
-            color: white;
-            font-size: small;
+
+        .box button:hover {
+            opacity: 0.9;
         }
-        .footer-cont{
+
+        #box-button1 { background-color: #2196F3; }
+        #box-button2 { background-color: #4CAF50; }
+        #box-button3 { background-color: #9C27B0; }
+        #box-button4 { background-color: #F44336; }
+
+        .box button a {
+            color: white;
+            font-size: 0.95rem;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        .footer-cont {
             background-color: #1f2937;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 50px;
+            justify-content: center;
+            margin-top: 80px;
+            padding: 40px 20px;
+            text-align: center;
+            gap: 10px;
         }
-        .p-one{
+
+        .p-one {
             color: white;
+            font-size: 0.95rem;
         }
-        .p-two{
-            color: #7094a7;
+
+        .p-two {
+            color: #9ca3af;
+            font-size: 0.9rem;
         }
-        .p-two i{
-            color: red;
+
+        .p-two i {
+            color: #ef4444;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            nav {
+                margin: 10px;
+                padding: 12px 20px;
+            }
+
+            #logo {
+                font-size: 26px;
+            }
+
+            #school h1 {
+                font-size: 20px;
+            }
+
+            .hero {
+                width: 95%;
+                padding: 30px 15px;
+            }
+
+            #heading {
+                font-size: 1.7rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            #tage-one {
+                font-size: 1.4rem;
+                margin-top: 35px;
+            }
+
+            .courses {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 100%;
+                max-width: 320px;
+            }
         }
     </style>
 </head>
@@ -189,50 +293,54 @@
             <div id="school"><h1>school</h1></div>
         </div>
         <div class="links">
-           
-                <a href="index.html">Home</a>
-                <a href="courses.html">Course</a>
-            
+            <a href="index.html">Home</a>
+            <a href="courses.html">Course</a>
         </div>
     </nav>
+
     <div class="container">
         <div class="hero">
             <h1 id="heading">Learning Made Fun!</h1>
-            <p>explore exciting courses in tech and science.Your adventure starts now!</p>
-            <button id="hero-button"><a id="hero-button" href="#test">See our courses</a> <i class="fas fa-arrow-down ml-2"></i></button>
+            <p>Explore exciting courses in tech and science. Your adventure starts now!</p>
+            <button id="hero-button">
+                <a id="hero-button-link" href="#test" style="color: #1E88E5;">See our courses</a> 
+                <i class="fas fa-arrow-down"></i>
+            </button>
         </div>
-        <h1 id="tage-one">Our Awesome courses</h1>
+        <h1 id="tage-one">Our Awesome Courses</h1>
     </div>
+
     <div id="test" class="courses">
         <div class="box">
-            <i id="net" class="fas fa-network-wired fa-3x  mb-4"></i>
+            <i id="net" class="fas fa-network-wired fa-3x mb-2"></i>
             <h2>Networking</h2>
-            <p>Learn How computers talk to each other</p>
+            <p>Learn how computers talk to each other.</p>
             <button id="box-button1"><a href="courses.html">Start Now</a></button>
         </div>
         <div class="box">
-            <i id="dev" class="fas fa-code fa-3x text-green-500 mb-4"></i>
+            <i id="dev" class="fas fa-code fa-3x mb-2"></i>
             <h2>Development</h2>
-            <p id="pp">Build your own websites and apps</p>
+            <p>Build your own websites and apps.</p>
             <button id="box-button2"><a href="courses.html">Start Now</a></button>
         </div>
         <div class="box">
-            <i id="art" class="fas fa-robot fa-3x text-purple-500 mb-4"></i>
+            <i id="art" class="fas fa-robot fa-3x mb-2"></i>
             <h2>Artificial Intelligence</h2>
-            <p>Discover how to make smart machines</p>
+            <p>Discover how to make smart machines.</p>
             <button id="box-button3"><a href="courses.html">Start Now</a></button>
         </div>
         <div class="box">
-            <i id="elec" class="fas fa-microchip fa-3x text-red-500 mb-4"></i>
+            <i id="elec" class="fas fa-microchip fa-3x mb-2"></i>
             <h2>Electronics</h2>
-            <p>Learn about circuit and build cool gadgets</p>
+            <p>Learn about circuits and build cool gadgets.</p>
             <button id="box-button4"><a href="courses.html">Start Now</a></button>
         </div>
     </div>
+
     <footer>
         <div class="footer-cont">
             <p class="p-one">&copy; 2025 School. All Rights Reserved.</p>
-            <p class="p-two">Made with <i class="fas fa-heart text-red-500"></i> for awesome students!</p>
+            <p class="p-two">Made with <i class="fas fa-heart"></i> for awesome students!</p>
         </div>
     </footer>
 </body>
