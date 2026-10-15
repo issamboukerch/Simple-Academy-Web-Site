@@ -1,135 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School - Courses Outline</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        background-color: #f9fafb;
-      }
-      .links a {
-        text-decoration: none;
-        color: gray;
-        font-size: 20px;
-        padding: 5px;
-        font-weight: bold;
-      }
-      nav {
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 15px;
-        box-shadow: 5px 5px 10px rgb(201, 201, 201);
-        position: sticky;
-        top: 0;
-      }
-      .logos {
-        display: flex;
-        align-items: center;
-      }
-      #logo {
-        padding-left: 100px;
-        color: #1e88e5;
-        font-size: 30px;
-      }
-      #school {
-        margin-left: 20px;
-        color: #1e88e5;
-        font-size: 20px;
-      }
-      .links {
-        margin-right: 90px;
-      }
-      .header {
-        display: flex;
-        margin-left: 130px;
-        align-items:center ;
-      }
-      .header h2 {
-        color: #5d5c5c;
-      }
-      .header a {
-        border: none;
-        color: #1e88e5;
-        background-color: #f9fafb;
-        font-size: large;
-        margin-right: 20px;
-      }
-      .content {
-        box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1),
-          0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        width: 25%;
-        height: 400px;
-        border-radius: 15px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-      }
-      .content h2 {
-        margin-left: 20px;
-        border-bottom: solid 1px lightgray;
-        padding-bottom: 10px;
-      }
-      .content li {
-        font-size: 20px;
-        padding: 10px;
-      }
-      .content a {
-        text-decoration: none;
-        font-size: large;
-        font-weight: bold;
-        color: #5d5c5c;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        padding: 10px;
-        padding-right: 50px;
-      }
-      .content li:hover {
-        background-color: lightblue;
-        border-radius: 15px;
-      }
-      .courses-page {
-        display: flex;
-      }
-      .card {
-        
-        width: 900px;
-        height: 400px;
-        box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1),
-          0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        border-radius: 15px;
-        padding: 10px;
-        padding-left: 25px;
-        margin-left: 30px;
-      }
-      .card p{
-        color: #5d5c5c;
-      }
-      div.content-courses > div {
-        display: none;
-      }
-      .vid {
-        display: flex;
-        justify-content: center;
-        
-      }
-      .vid video{
-        border-radius: 15px;
-      }
-      
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 15px;
+            z-index: 1000;
+            padding: 15px 40px;
+            max-width: 1200px;
+            margin: 15px auto;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        #logo {
+            color: #1e88e5;
+            font-size: 30px;
+        }
+
+        #school h1 {
+            color: #1e88e5;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #616161;
+            font-size: 17px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .links a:hover {
+            color: #1E88E5;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 30px auto 20px auto;
+            padding: 0 20px;
+            gap: 15px;
+        }
+
+        .header h2 {
+            color: #424242;
+            font-size: 1.8rem;
+        }
+
+        .header a {
+            border: none;
+            color: #1e88e5;
+            background-color: #f9fafb;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+
+        .header a:hover {
+            transform: translateX(-3px);
+        }
+
+        /* Main Page Layout */
+        .courses-page {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+            gap: 30px;
+        }
+
+        /* Topics Sidebar */
+        .content {
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            width: 320px;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+        }
+
+        .content h2 {
+            margin-left: 10px;
+            border-bottom: solid 2px #f0f0f0;
+            padding-bottom: 15px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .content ol {
+            list-style-position: inside;
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .content li {
+            font-size: 1rem;
+            border-radius: 12px;
+            transition: background-color 0.2s ease;
+        }
+
+        .content li a {
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #5d5c5c;
+            display: block;
+            padding: 12px 15px;
+            border-radius: 12px;
+        }
+
+        .content li:hover {
+            background-color: #e3f2fd;
+        }
+
+        .content li:hover a {
+            color: #1e88e5;
+        }
+
+        /* Course Video Card */
+        .content-courses {
+            flex-grow: 1;
+        }
+
+        .card {
+            background: white;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: #222;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        div.content-courses > div {
+            display: none;
+        }
+
+        .vid {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .vid video {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .courses-page {
+                flex-direction: column;
+            }
+
+            .content {
+                width: 100%;
+            }
+
+            nav {
+                padding: 12px 20px;
+                margin: 10px;
+            }
+
+            #logo {
+                font-size: 24px;
+            }
+
+            #school h1 {
+                font-size: 20px;
+            }
+
+            .header {
+                margin: 20px auto 15px auto;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <nav>
       <div class="logos">
         <i id="logo" class="fas fa-graduation-cap"></i>
@@ -140,22 +251,23 @@
         <a href="courses.html">Course</a>
       </div>
     </nav>
+
     <div class="header">
-      
         <a href="index.html#test"><i class="fas fa-arrow-left fa-lg"></i></a>
-      
-      <h2>Courses Outline</h2>
+        <h2>Courses Outline</h2>
     </div>
+
     <div class="courses-page">
       <div class="content">
         <h2>Topics</h2>
         <ol>
-            <li><a href="#" onclick="showContent('net')">Intro to Networking</a></li>
-            <li><a href="#" onclick="showContent('dev')">Development Basics</a></li>
-            <li><a href="#" onclick="showContent('ai')">Ai Concepts</a></li>
-            <li><a href="#" onclick="showContent('elec')">Electronics 101</a></li>
+            <li><a href="#" onclick="showContent('net'); return false;">Intro to Networking</a></li>
+            <li><a href="#" onclick="showContent('dev'); return false;">Development Basics</a></li>
+            <li><a href="#" onclick="showContent('ai'); return false;">AI Concepts</a></li>
+            <li><a href="#" onclick="showContent('elec'); return false;">Electronics 101</a></li>
         </ol>
       </div>
+
       <div class="content-courses">
         <div class="card" id="net">
           <h2>1. Intro to Networking</h2>
@@ -164,58 +276,54 @@
             share information.
           </p>
           <div class="vid">
-            <video width="500" controls
-              src="video/networking.mp4"
-            ></video>
+            <video controls src="video/networking.mp4"></video>
           </div>
         </div>
-        <div class="card" id="dev" >
+
+        <div class="card" id="dev">
           <h2>2. Development Basics</h2>
           <p>
             Let's learn the basics of HTML, CSS, and JavaScript to build our
             first webpage!
           </p>
           <div class="vid">
-            <video width="500" controls
-              src="video/dev.mp4"
-            ></video>
+            <video controls src="video/dev.mp4"></video>
           </div>
         </div>
-        <div class="card" id="ai" >
+
+        <div class="card" id="ai">
           <h2>3. AI Concepts</h2>
           <p>
             What is Artificial Intelligence? Let's explore how we can make
             computers think like humans.
           </p>
           <div class="vid">
-            <video width="500" controls
-              src="video/AI.mp4"
-            ></video>
+            <video controls src="video/AI.mp4"></video>
           </div>
         </div>
-        <div class="card" id="elec" >
+
+        <div class="card" id="elec">
           <h2>4. Electronics 101</h2>
           <p>
             Let's learn about the tiny parts that power our phones and
             computers, like resistors and circuits.
           </p>
           <div class="vid">
-            <video width="500" height="280" controls
-              src="video/elec.mp4"
-            ></video>
+            <video controls src="video/elec.mp4"></video>
           </div>
         </div>
       </div>
     </div>
+
     <script>
         function showContent(show){
-            let card =document.querySelectorAll('.content-courses > div');
-            for (let i=0; i < card.length; i++) {
+            let card = document.querySelectorAll('.content-courses > div');
+            for (let i = 0; i < card.length; i++) {
                 card[i].style.display = 'none';
             }
             document.getElementById(show).style.display = 'block';
         }
-        showContent('net')
+        showContent('net');
     </script>
-  </body>
+</body>
 </html>
